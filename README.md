@@ -12,3 +12,5 @@ Asumsi :
 6. buat database dulu di xampp / server lokalmu dengan namadatabase yang ada di no. 5. (etabungandb)
 7. php artisan migrate
 8. php artisan db:seed --class=SampleDataSeeder
+
+~ v1.0.0-alpha Released on 18 June 2024
