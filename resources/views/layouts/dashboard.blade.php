@@ -128,7 +128,7 @@
                                 </div>
                             </li>
 
-                           <!-- <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <form action="{{ route('logout') }}" method="post">
                                     @csrf
                                     <button type="submit" class="dropdown-item ai-icon">
@@ -207,6 +207,10 @@
                             </li>
                             <li>
                                 <a href="{{ route('transactions.create') }}">Tambah Transaksi</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('transactions.create-v2') }}">Transaksi v2</a>
                             </li>
                         </ul>
                     </li>
