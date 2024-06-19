@@ -106,6 +106,15 @@ class TransactionController extends Controller
         return view('transactions.create', compact('users', 'classLevels'));
     }
 
+    public function create_v2()
+    {
+        // show semua user dengan role id 3 (role siswa)
+        $users = User::where('id_role', 3)->get();
+        $classLevels = ClassLevel::all();
+
+        return view('transactions.create-v2', compact('users', 'classLevels'));
+    }
+
     public function store(Request $request)
     {
         // Generate random 10-digit tr_id
@@ -120,13 +129,13 @@ class TransactionController extends Controller
         $transaction->bnr_pjg = $request->has('bnr_pjg') ? $request->input('bnr_pjg') : null;
 
         $transaction->bnr_tgi = $request->has('bnr_tgi') ? $request->input('bnr_tgi') : null;
-        
+
         $transaction->plong = $request->has('plong') ? $request->input('plong') : null;
-        
-         $transaction->custPrice = $request->has('custPrice') ? $request->input('custPrice') : null;
+
+        $transaction->custPrice = $request->has('custPrice') ? $request->input('custPrice') : null;
 
         $transaction->konsep = $request->has('konsep') ? $request->input('konsep') : null;
-        
+
         $transaction->jumlahLembar = $request->has('jumlahLembar') ? $request->input('jumlahLembar') : null;
 
 

@@ -22,6 +22,9 @@ Route::middleware('auth')->group(function () {
     // transaksi 
     Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
     Route::get('/transactions/create', [TransactionController::class, 'create'])->name('transactions.create');
+
+    Route::get('/transactions/create-v2', [TransactionController::class, 'create_v2'])->name('transactions.create-v2');
+
     Route::post('/transactions', [TransactionController::class, 'store'])->name('transactions.store');
 
     Route::get('/transactions/print', [TransactionController::class, 'print'])->name('transactions.print');
